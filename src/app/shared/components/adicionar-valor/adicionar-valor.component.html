@@ -1,3 +1,73 @@
-<p>
-  adicionar-valor works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar Valor</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/resumo-categoria"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-valores">
+  <div class="adicionar-valor-container">
+    <form (submit)="adicionarTransacao()" style="width: 100%;">
+
+      <ion-list class="input-form" lines="none">
+        <ion-item class="input-field" lines="none">
+          <ion-select [(ngModel)]="tipo" name="tipo">
+            <ion-select-option value="entrada">Entrada</ion-select-option>
+            <ion-select-option value="saida">Saída</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="input-field" lines="none">
+
+          <ion-input [(ngModel)]="categoria" name="Categoria" placeholder="Categoria" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-field" lines="none">
+          <ion-input [(ngModel)]="titulo" name="Título" placeholder="Título" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-field" lines="none">
+          <ion-input [(ngModel)]="quantia" name="Quantia" type="number" placeholder="Quantia" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-field" lines="none">
+          <ion-input type="date" id="data" [(ngModel)]="data" name="Data" placeholder="Data" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-field" lines="none">
+          <ion-textarea [(ngModel)]="mensagem" name="Mensagem" placeholder="Mensagem" auto-grow="true"></ion-textarea>
+        </ion-item>
+      </ion-list>
+
+      <ion-button expand="block" type="submit">Salvar</ion-button>
+    </form>
+  </div>
+</ion-content>
+
+
+<!-- Barra de navegação inferior -->
+<ion-footer class="nav-footer">
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button (click)="home()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="relatorios()">
+        <ion-icon name="analytics-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="categorias()">
+        <ion-icon name="albums-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="perfil()">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

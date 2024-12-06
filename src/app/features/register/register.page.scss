@@ -1,0 +1,122 @@
+.register-screen {
+    --background: #00d1a0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    padding: 0;
+}
+
+.form-container {
+    background-color: #F1FFF3;
+    height: 85vh;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.title {
+    color: #093030;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.input-field {
+    --background: transparent;
+
+
+    ion-label {
+        color: #093030;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        margin: 10px;
+
+    }
+
+    ion-input {
+        --background: #DFF7E2;
+        color: #093030;
+        --padding-start: 10px;
+        --padding-end: 10px;
+        --border-radius: 20px;
+        width: 100%;
+    }
+}
+
+.register-button {
+    --color: #093030;
+    --border-radius: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    --background: #00d1a0;
+    width: 70%;
+    /* Aumentado para ficar mais proporcional na tela menor */
+    margin: 2px auto;
+    /* Menos margem */
+    height: 30px;
+    /* Levemente aumentado */
+}
+
+.terms {
+    color: #4B4544;
+    text-align: center;
+    font-size: 10px;
+    /* Reduzido para caber melhor */
+    font-style: normal;
+    line-height: normal;
+    bottom: 86px;
+
+    a {
+        color: #4B4544;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .input-form ion-label {
+        font-size: 0.8rem;
+    }
+
+    .register-button {
+        width: 90%;
+        /* Melhor ajuste para telas pequenas */
+        height: 40px;
+    }
+}
+
+
+.extra-options {
+    color: #4B4544;
+    text-align: center;
+    font-size: 10px;
+    /* Reduzido */
+    font-style: normal;
+    line-height: normal;
+
+    a {
+        color: #0068FF;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}

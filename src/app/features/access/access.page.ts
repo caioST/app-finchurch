@@ -1,15 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-access',
   templateUrl: './access.page.html',
   styleUrls: ['./access.page.scss'],
 })
-export class AccessPage implements OnInit {
+export class AccessPage {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
+  resetPassword() {
+    this.navCtrl.navigateForward('/forgot-password,', {
+      animated: true,
+      animationDirection: 'forward'
+    });
   }
 
+  goToLogin() {
+
+    this.navCtrl.navigateForward('/login', {
+      animated: true,
+      animationDirection: 'forward'
+    });
+  }
+
+  goToRegister() {
+    this.navCtrl.navigateForward('/register', {
+      animated: true,
+      animationDirection: 'forward'
+    });
+  }
 }
